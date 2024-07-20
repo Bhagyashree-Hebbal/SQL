@@ -1,0 +1,35 @@
+/*task-1 12-7-24*/
+CREATE DATABASE Bhagya;
+USE Bhagya;
+CREATE TABLE employee_details(id int,name varchar(50));
+select * from employee_details;
+ALTER TABLE employee_details ADD COLUMN last_name varchar(20),ADD COLUMN email varchar(25), ADD COLUMN phone_no int,
+ADD COLUMN salary int,ADD COLUMN dept int;
+select * from employee_details;
+ALTER TABLE employee_details DROP COLUMN email;
+ALTER TABLE employee_details DROP COLUMN last_name;
+ALTER TABLE employee_details RENAME COLUMN id TO id_no;
+ALTER TABLE employee_details RENAME COLUMN name TO emp_name;
+ALTER TABLE employee_details RENAME COLUMN phone_no TO emp_phone_no;
+ALTER TABLE employee_details RENAME COLUMN salary TO emp_salary;
+ALTER TABLE employee_details RENAME COLUMN dept TO emp_dept;
+DESC employee_details;
+ALTER TABLE employee_details MODIFY COLUMN emp_phone_no bigint;
+ALTER TABLE employee_details MODIFY COLUMN emp_salary bigint;
+ALTER TABLE employee_details MODIFY COLUMN emp_dept varchar(20);
+DESC employee_details;
+INSERT INTO employee_details values(1,'Bhagyashree',7411054225,50000,'Developer');
+INSERT INTO employee_details values(2,'Soumya',773754589,40000,'Developer');
+INSERT INTO employee_details values(3,'Shanta',87636964595,30000,'Software Engineer');
+INSERT INTO employee_details values(4,'Ashwini',36769389,45000,'Developer');
+INSERT INTO employee_details values(5,'Renuka',687625764,25000,'Trainer');
+INSERT INTO employee_details values(6,'Sohita',84839451225,40000,'Trainer');
+INSERT INTO employee_details values(7,'Kalpana',1592645845,20000,'Web developer');
+INSERT INTO employee_details values(8,'Sushma',4869133555,25000,'Trainer');
+INSERT INTO employee_details values(9,'Anaveer',168593555,50000,'Web Developer');
+INSERT INTO employee_details values(10,'Chanveer',68563263,20000,'Trainer');
+select * from employee_details;
+SELECT emp_name from employee_details;
+SELECT id_no,emp_name from employee_details;
+SELECT * FROM employee_details WHERE id_no=9;
+SELECT * FROM employee_details WHERE emp_salary=50000;

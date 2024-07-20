@@ -1,0 +1,14 @@
+CREATE DATABASE shree;
+USE shree;
+CREATE TABLE course(id int,c_name varchar(20));
+SELECT * FROM course;
+ALTER TABLE course ADD COLUMN c_duration int;
+ALTER TABLE course ADD COLUMN c_fees int,ADD COLUMN no_of_students int;
+SELECT * FROM course;
+ALTER TABLE course DROP COLUMN c_duration;
+SELECT * FROM course;
+ALTER TABLE course RENAME COLUMN no_of_students TO no_of_trainee;
+SELECT * FROM course;
+ALTER TABLE course MODIFY COLUMN c_fees bigint;
+SELECT * FROM course;
+DESC course;
